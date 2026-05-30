@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: sagemis-web
+    container_name: sagemis-web
+    ports:
+      - "80:80"
+    restart: unless-stopped

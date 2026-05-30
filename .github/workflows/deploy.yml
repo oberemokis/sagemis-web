@@ -1,0 +1,53 @@
+name: sagemita deploy to server
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+env:
+  SSH_HOST: ${{ secrets.SSH_HOST }}
+  SSH_USER: ${{ secrets.SSH_USER }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Подготовка SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          if [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ] || [ -z "$SSH_PRIVATE_KEY" ]; then
+            echo "::error::Не заданы секреты. Нужны SSH_HOST, SSH_USER и SSH_PRIVATE_KEY (Settings → Secrets and variables → Actions)."
+            echo "SSH_HOST задан:        $([ -n "$SSH_HOST" ] && echo да || echo НЕТ)"
+            echo "SSH_USER задан:        $([ -n "$SSH_USER" ] && echo да || echo НЕТ)"
+            echo "SSH_PRIVATE_KEY задан: $([ -n "$SSH_PRIVATE_KEY" ] && echo да || echo НЕТ)"
+            exit 1
+          fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      - name: Копирование проекта на сервер
+        run: |
+          rsync -az --delete \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='.nuxt' \
+            --exclude='.output' \
+            -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new" \
+            ./ "$SSH_USER@$SSH_HOST:app/"
+
+      - name: Сборка и перезапуск контейнера
+        run: |
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new \
+            "$SSH_USER@$SSH_HOST" \
+            'cd ~/app && docker compose up --build -d && docker image prune -f'
