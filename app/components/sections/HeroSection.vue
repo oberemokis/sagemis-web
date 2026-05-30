@@ -20,7 +20,7 @@ const { hero } = site;
       <h1
         id="hero-title"
         v-reveal="80"
-        class="reveal-init mb-6 font-tiempos text-[clamp(36px,6.5vw,72px)] font-semibold leading-[1.05] tracking-[-0.03em]"
+        class="reveal-init mb-6 font-tiempos text-[clamp(36px,6.5vw,72px)] font-normal leading-[1.05] tracking-[-0.03em]"
       >
         <template v-for="(line, i) in hero.titleLines" :key="line">
           {{ line }}<br v-if="i < hero.titleLines.length - 1" />

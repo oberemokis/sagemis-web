@@ -121,7 +121,12 @@ useHead({
   <div class="flex min-h-screen flex-col">
     <NuxtRouteAnnouncer />
     <SiteHeader />
-    <main class="flex-1">
+    <main class="relative flex-1">
+      <div
+        class="pointer-events-none absolute inset-x-0 top-[100vh] hidden h-[200vh] bg-linear-to-b from-white to-emerald-50 min-[861px]:block"
+      >
+        <RoadBackdrop />
+      </div>
       <HeroSection />
       <RentalSection />
       <RepairSection />

@@ -8,7 +8,7 @@ defineProps<{ href: string; label: string; active?: boolean }>();
     :aria-current="active ? 'true' : undefined"
     class="relative text-[15px] transition-colors"
     :class="
-      active ? 'text-emerald-700' : 'text-neutral-500 hover:text-emerald-700'
+      active ? 'text-emerald-700' : 'text-neutral-900 hover:text-emerald-700'
     "
   >
     {{ label }}

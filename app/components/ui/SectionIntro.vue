@@ -18,7 +18,7 @@ defineProps<{
     <h2
       :id="titleId"
       v-reveal="80"
-      class="reveal-init mb-4 text-[clamp(28px,4vw,44px)] font-semibold leading-[1.15] tracking-[-0.02em]"
+      class="reveal-init mb-4 font-tiempos text-[clamp(28px,4vw,44px)] font-normal leading-[1.15] tracking-[-0.02em]"
     >
       {{ title }}
     </h2>

@@ -1,12 +1,12 @@
 # Шрифты
 
-Сюда нужно положить лицензионные файлы шрифта **Tiempos Text**
-(Klim Type Foundry) в формате `woff2`. Имена файлов должны совпадать с тем,
-что прописано в `@font-face` (см. `app/assets/css/main.css`):
+Лицензионный шрифт **Tiempos Text** (Klim Type Foundry), формат `woff2`.
+Имена файлов должны совпадать с `@font-face` в `app/assets/css/main.css`:
 
-- `TiemposText-Regular.woff2` — начертание 400
-- `TiemposText-Semibold.woff2` — начертание 600 (используется в заголовке hero)
+- `TiemposText-Regular.woff2` — начертание 400 (используется в заголовке hero)
 
-Важно: версия шрифта должна включать кириллицу (заголовок на русском).
+Заголовок hero выводится в Regular (400). Если захотите более жирное начертание,
+добавьте `TiemposText-Semibold.woff2` (600), верните в `main.css` соответствующий
+`@font-face` и поставьте на заголовке класс `font-semibold`.
 
-Пока файлов нет, заголовок отображается фолбэком — `Georgia, "Times New Roman", serif`.
+Версия шрифта должна включать кириллицу. Фолбэк — `Georgia, "Times New Roman", serif`.

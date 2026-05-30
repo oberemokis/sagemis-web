@@ -8,9 +8,9 @@ const { rental } = site;
   <section
     id="rental"
     aria-labelledby="rental-title"
-    class="snap-section flex flex-col justify-center px-6 pb-16 pt-28"
+    class="snap-section relative flex flex-col justify-center px-6 pb-16 pt-28"
   >
-    <div class="mx-auto w-full max-w-280">
+    <div class="relative z-10 mx-auto w-full max-w-280">
       <SectionIntro
         title-id="rental-title"
         :eyebrow="rental.eyebrow"

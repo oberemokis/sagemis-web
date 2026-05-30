@@ -8,10 +8,10 @@ const { repair } = site;
   <section
     id="repair"
     aria-labelledby="repair-title"
-    class="snap-section flex flex-col justify-center border-y border-emerald-100 bg-emerald-50/50 px-6 pb-16 pt-28"
+    class="snap-section relative flex flex-col justify-center px-5 pb-16 pt-24 sm:px-6 sm:pt-28"
   >
     <div
-      class="mx-auto grid w-full max-w-280 items-start gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16"
+      class="relative z-10 mx-auto grid w-full max-w-280 items-start gap-8 sm:gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16"
     >
       <SectionIntro
         class="md:self-center"

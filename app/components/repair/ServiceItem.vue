@@ -9,7 +9,7 @@ const num = computed(() => String(props.index + 1).padStart(2, "0"));
 
 <template>
   <li
-    class="grid grid-cols-[auto_1fr_auto] items-baseline gap-5 border-t border-emerald-100 py-6 last:border-b"
+    class="grid grid-cols-[auto_1fr_auto] items-baseline gap-3 py-5 sm:gap-5 sm:py-6"
   >
     <span class="text-sm tabular-nums text-emerald-600" aria-hidden="true">
       {{ num }}

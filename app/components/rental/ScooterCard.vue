@@ -6,8 +6,25 @@ defineProps<{ item: ScooterItem; cta: string; ctaHref: string }>();
 
 <template>
   <article
-    class="flex h-full flex-col overflow-hidden rounded-[14px] border border-neutral-200 transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
+    class="relative flex h-full flex-col border border-neutral-300 bg-white transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
   >
+    <span
+      class="absolute -left-1 -top-1 h-2 w-2 rotate-45 bg-emerald-600"
+      aria-hidden="true"
+    />
+    <span
+      class="absolute -right-1 -top-1 h-2 w-2 rotate-45 bg-emerald-600"
+      aria-hidden="true"
+    />
+    <span
+      class="absolute -bottom-1 -left-1 h-2 w-2 rotate-45 bg-emerald-600"
+      aria-hidden="true"
+    />
+    <span
+      class="absolute -bottom-1 -right-1 h-2 w-2 rotate-45 bg-emerald-600"
+      aria-hidden="true"
+    />
+
     <div
       class="flex h-[180px] items-center justify-center"
       :style="{ background: item.tone }"
