@@ -17,7 +17,7 @@ export const site = {
     ],
     locale: "ru_RU",
     ogImage: "/og.svg",
-    themeColor: "#111111",
+    themeColor: "#047857",
   },
 
   business: {
@@ -49,7 +49,7 @@ export const site = {
 
   hero: {
     eyebrow: "Прокат · Ремонт · Сервис",
-    titleLines: ["Самокаты для города.", "Просто. Быстро. Удобно."],
+    titleLines: ["Самокаты для отдыха"],
     lead: "Берите электросамокат напрокат на час или на месяц, а если сломался — починим в день обращения.",
     actions: [
       {
@@ -90,7 +90,7 @@ export const site = {
       {
         name: "City Lite",
         tag: "Город",
-        tone: "#f4f4f5",
+        tone: "#eaf5ec",
         price: "490",
         unit: "₽/день",
         specs: ["Запас хода 25 км", "Скорость до 25 км/ч", "Вес 12 кг"],
@@ -98,7 +98,7 @@ export const site = {
       {
         name: "Urban Pro",
         tag: "Хит",
-        tone: "#eef2f7",
+        tone: "#e7f0f7",
         price: "790",
         unit: "₽/день",
         specs: ["Запас хода 45 км", "Скорость до 30 км/ч", "Амортизаторы"],
@@ -106,7 +106,7 @@ export const site = {
       {
         name: "Max Range",
         tag: "Дальние",
-        tone: "#f3f1ee",
+        tone: "#f4eddf",
         price: "1190",
         unit: "₽/день",
         specs: ["Запас хода 70 км", "Скорость до 35 км/ч", "Двойной мотор"],
@@ -151,7 +151,7 @@ export const site = {
 
   footer: {
     brand: "sagemis",
-    tagline: "Прокат и ремонт самокатов в вашем городе с 2018 года.",
+    tagline: "Прокат и ремонт самокатов в вашем городе с 2026 года.",
     emailButton: {
       label: "Написать нам",
       email: "hello@sagemis.ru",

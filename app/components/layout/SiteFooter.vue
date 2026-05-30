@@ -8,7 +8,7 @@ const { footer } = site;
   <footer
     id="footer"
     aria-label="Подвал сайта"
-    class="snap-section flex flex-col justify-center bg-neutral-950 text-neutral-200"
+    class="snap-section flex flex-col justify-center bg-emerald-950 text-neutral-200"
   >
     <div
       v-reveal
@@ -22,7 +22,7 @@ const { footer } = site;
         >
           <BrandLogo />
         </a>
-        <p class="mt-4 max-w-70 text-[15px] text-neutral-400">
+        <p class="mt-4 max-w-70 text-[15px] text-emerald-200/80">
           {{ footer.tagline }}
         </p>
         <EmailButton class="mt-6" :data="footer.emailButton" />

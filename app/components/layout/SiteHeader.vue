@@ -7,7 +7,7 @@
     >
       <a
         href="#top"
-        class="text-xl font-bold tracking-wide text-neutral-900"
+        class="text-xl font-bold tracking-wide text-emerald-700"
         aria-label="sagemis — на главную"
       >
         <BrandLogo />

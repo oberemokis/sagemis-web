@@ -11,7 +11,7 @@ defineProps<{
   <div>
     <p
       v-reveal
-      class="reveal-init mb-4 text-[13px] uppercase tracking-[0.14em] text-neutral-500"
+      class="reveal-init mb-4 text-[13px] uppercase tracking-[0.14em] text-emerald-700"
     >
       {{ eyebrow }}
     </p>

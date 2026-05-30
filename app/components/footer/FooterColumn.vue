@@ -7,7 +7,7 @@ defineProps<{ column: FooterColumnData }>();
 <template>
   <li class="flex flex-col gap-3">
     <h2
-      class="mb-1 text-[13px] font-medium uppercase tracking-widest text-neutral-500"
+      class="mb-1 text-[13px] font-medium uppercase tracking-widest text-emerald-400"
     >
       {{ column.head }}
     </h2>

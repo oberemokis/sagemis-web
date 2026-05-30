@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
-  <rect width="1200" height="630" fill="#ffffff"/>
-  <g stroke="#111111" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(96 110) scale(3.6)">
+  <rect width="1200" height="630" fill="#f0f7f2"/>
+  <g stroke="#047857" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(96 110) scale(3.6)">
     <circle cx="6.5" cy="23.5" r="4.3"/>
     <circle cx="24" cy="23.5" r="4.3"/>
     <path d="M10.7 23.5 H19.8"/>
     <path d="M24 23.5 V7"/>
     <path d="M20.4 7 H28"/>
   </g>
-  <text x="96" y="370" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="104" font-weight="700" letter-spacing="-3" fill="#111111">sagemis</text>
+  <text x="96" y="370" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="104" font-weight="700" letter-spacing="-3" fill="#047857">sagemis</text>
   <text x="98" y="450" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="400" fill="#6b7280">Прокат и ремонт самокатов</text>
   <text x="98" y="520" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="400" fill="#9ca3af">Аренда от часа · Ремонт в день обращения · Поддержка 24/7</text>
 </svg>

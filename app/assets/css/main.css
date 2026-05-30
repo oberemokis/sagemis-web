@@ -3,6 +3,23 @@
 @theme {
   --color-ink: #111111;
   --color-line: #ececec;
+  --font-tiempos: "Tiempos Text", Georgia, "Times New Roman", serif;
+}
+
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("/fonts/TiemposText-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("/fonts/TiemposText-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {

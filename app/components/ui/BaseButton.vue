@@ -11,10 +11,10 @@ const props = withDefaults(
 );
 
 const variantClasses: Record<NonNullable<typeof props.variant>, string> = {
-  solid: "border-neutral-900 bg-neutral-900 text-white hover:opacity-85",
+  solid: "border-emerald-700 bg-emerald-700 text-white hover:bg-emerald-800",
   ghost:
-    "border-neutral-900 bg-transparent text-neutral-900 hover:bg-neutral-900 hover:text-white",
-  light: "border-white bg-white text-neutral-900 hover:opacity-85",
+    "border-emerald-700 bg-transparent text-emerald-700 hover:bg-emerald-700 hover:text-white",
+  light: "border-white bg-white text-emerald-800 hover:opacity-85",
 };
 
 const sizeClasses: Record<NonNullable<typeof props.size>, string> = {

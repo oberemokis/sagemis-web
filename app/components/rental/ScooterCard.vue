@@ -12,14 +12,14 @@ defineProps<{ item: ScooterItem; cta: string; ctaHref: string }>();
       class="flex h-[180px] items-center justify-center"
       :style="{ background: item.tone }"
     >
-      <IconScooter class="h-16 w-16 text-neutral-700" />
+      <IconScooter class="h-16 w-16 text-emerald-700" />
     </div>
 
     <div class="flex flex-1 flex-col gap-[18px] p-6">
       <div class="flex items-center justify-between">
         <h3 class="text-xl font-semibold">{{ item.name }}</h3>
         <span
-          class="rounded-full border border-neutral-200 px-2.5 py-1 text-xs uppercase tracking-[0.06em] text-neutral-500"
+          class="rounded-full border border-emerald-200 px-2.5 py-1 text-xs uppercase tracking-[0.06em] text-emerald-700"
         >
           {{ item.tag }}
         </span>
@@ -29,7 +29,7 @@ defineProps<{ item: ScooterItem; cta: string; ctaHref: string }>();
         <li
           v-for="spec in item.specs"
           :key="spec"
-          class="relative pl-[18px] text-[15px] text-neutral-500 before:absolute before:left-0 before:top-[10px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-neutral-900"
+          class="relative pl-[18px] text-[15px] text-neutral-500 before:absolute before:left-0 before:top-[10px] before:h-1.5 before:w-1.5 before:rounded-full before:bg-emerald-600"
         >
           {{ spec }}
         </li>
