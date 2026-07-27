@@ -26,10 +26,15 @@ defineProps<{ item: ScooterItem; cta: string; ctaHref: string }>();
     />
 
     <div
-      class="flex h-[180px] items-center justify-center"
+      class="flex h-[260px] items-center justify-center overflow-hidden"
       :style="{ background: item.tone }"
     >
-      <IconScooter class="h-16 w-16 text-emerald-700" />
+      <PhotoCarousel
+        v-if="item.images.length"
+        :images="item.images"
+        :alt="`${item.name} — ${item.tag}`"
+      />
+      <IconBike v-else class="h-16 w-16 text-emerald-700" />
     </div>
 
     <div class="flex flex-1 flex-col gap-[18px] p-6">
@@ -41,6 +46,21 @@ defineProps<{ item: ScooterItem; cta: string; ctaHref: string }>();
           {{ item.tag }}
         </span>
       </div>
+
+      <ul v-if="item.colors.length" class="flex flex-wrap items-center gap-3">
+        <li
+          v-for="color in item.colors"
+          :key="color.label"
+          class="flex items-center gap-2 text-[15px] text-neutral-500"
+        >
+          <span
+            class="h-4 w-4 rounded-full border border-black/10"
+            :style="{ background: color.hex }"
+            aria-hidden="true"
+          />
+          {{ color.label }}
+        </li>
+      </ul>
 
       <ul class="flex flex-col gap-2">
         <li

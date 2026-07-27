@@ -18,7 +18,7 @@ const { rental } = site;
         :lead="rental.lead"
       />
 
-      <ul class="mt-14 grid gap-6 md:grid-cols-3">
+      <ul class="mx-auto mt-14 grid max-w-4xl gap-6 md:grid-cols-2">
         <li
           v-for="(item, i) in rental.items"
           :key="item.name"

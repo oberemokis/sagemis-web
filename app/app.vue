@@ -18,7 +18,7 @@ useSeoMeta({
   ogDescription: seo.description,
   ogUrl: seo.url,
   ogImage: absoluteOgImage,
-  ogImageAlt: `${brand} — прокат и ремонт самокатов`,
+  ogImageAlt: `${brand} — прокат трициклов и ремонт самокатов`,
   ogLocale: seo.locale,
   twitterCard: "summary_large_image",
   twitterTitle: seo.title,
@@ -60,6 +60,7 @@ const jsonLd = {
         addressLocality: business.addressLocality,
         addressCountry: business.addressCountry,
       },
+      hasMap: business.mapUrl,
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Услуги sagemis",
@@ -69,12 +70,18 @@ const jsonLd = {
             name: rental.title,
             itemListElement: rental.items.map((item) => ({
               "@type": "Offer",
-              name: `Прокат самоката ${item.name}`,
+              name: `Прокат — ${item.name}`,
               price: item.price,
               priceCurrency: "RUB",
+              priceSpecification: {
+                "@type": "UnitPriceSpecification",
+                price: item.price,
+                priceCurrency: "RUB",
+                unitCode: "HUR",
+              },
               itemOffered: {
                 "@type": "Service",
-                name: `Прокат самоката ${item.name}`,
+                name: `Прокат — ${item.name}`,
                 description: item.specs.join(", "),
               },
             })),

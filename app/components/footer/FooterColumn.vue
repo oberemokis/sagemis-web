@@ -16,6 +16,8 @@ defineProps<{ column: FooterColumnData }>();
         <a
           v-if="'href' in item && item.href"
           :href="item.href"
+          :target="item.href.startsWith('http') ? '_blank' : undefined"
+          :rel="item.href.startsWith('http') ? 'noopener noreferrer' : undefined"
           class="text-[15px] text-neutral-200 transition-colors hover:text-white"
         >
           {{ item.label }}
