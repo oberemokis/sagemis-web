@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { nextTick, ref } from "vue";
 
 const props = defineProps<{ images: readonly string[]; alt: string }>();
 
 const index = ref(0);
+const zoomed = ref(false);
+const zoomButton = ref<HTMLButtonElement | null>(null);
 
 function go(next: number) {
   const total = props.images.length;
   index.value = (next + total) % total;
+}
+
+// Фокус возвращается на фото, иначе после закрытия он улетает в начало страницы
+function onLightboxClose() {
+  nextTick(() => zoomButton.value?.focus());
 }
 
 // Свайп по фото: горизонтальный жест листает, вертикальный отдаём скроллу страницы
@@ -55,6 +62,15 @@ function onTouchEnd(event: TouchEvent) {
       />
     </div>
 
+    <!-- Стоит раньше стрелок и точек в разметке, чтобы те перехватывали свои клики -->
+    <button
+      ref="zoomButton"
+      type="button"
+      class="absolute inset-0 cursor-zoom-in"
+      aria-label="Открыть фото на весь экран"
+      @click="zoomed = true"
+    />
+
     <template v-if="images.length > 1">
       <button
         v-for="dir in [-1, 1]"
@@ -90,5 +106,13 @@ function onTouchEnd(event: TouchEvent) {
         </li>
       </ul>
     </template>
+
+    <PhotoLightbox
+      v-model:open="zoomed"
+      v-model:index="index"
+      :images="images"
+      :alt="alt"
+      @close="onLightboxClose"
+    />
   </div>
 </template>
