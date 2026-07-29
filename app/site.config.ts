@@ -189,8 +189,8 @@ export const site = {
       {
         head: "Мы в сети",
         items: [
-          { label: "Телеграм", href: "https://t.me/+79215538154" },
-          { label: "Ватсап", href: "https://wa.me/79215538154" },
+          { label: "Телеграм", href: "https://t.me/+79013015015" },
+          { label: "Ватсап", href: "https://wa.me/79013015015" },
         ],
       },
     ],
