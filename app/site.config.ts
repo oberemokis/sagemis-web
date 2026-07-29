@@ -172,8 +172,11 @@ export const site = {
       {
         head: "Контакты",
         items: [
-          { label: "+7 921 553-81-54", href: "tel:+79215538154" },
-          { label: "sagemis.ru@gmail.com", href: "mailto:sagemis.ru@gmail.com" },
+          { label: "+7 901 301-50-15", href: "tel:+79013015015" },
+          {
+            label: "sagemis.ru@gmail.com",
+            href: "mailto:sagemis.ru@gmail.com",
+          },
         ],
       },
       {
